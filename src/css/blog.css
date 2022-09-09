@@ -1,0 +1,83 @@
+.ibetcha-home #content {
+    background-color: var(--gray);
+}
+.ibetcha-home article {
+    background-color: var(--white);
+    padding: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+.ibetcha-home article:last-of-type { 
+    margin-bottom: 0;
+}
+.ibetcha-home article h2 {
+    font-size: 1.8rem;
+    font-family: var(--montserrat);
+}
+.ibetcha-home article p,
+.ibetcha-home article span,
+.ibetcha-home article small {
+    font-family: var(--amiko);
+}
+.ibetcha-home .ibetcha-post-category {
+    margin-bottom: 2rem;
+}
+.ibetcha-home .ibetcha-post-category h2 {
+    text-transform: uppercase;
+    color: var(--dark);
+}
+.ibetcha-home .ibetcha-article-image-wrapper {
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+@media ( min-width: 768px ) {
+    .ibetcha-home .ibetcha-article-image-wrapper {
+        height: 250px;
+    }
+}
+.ibetcha-home .ibetcha-article-image {    
+    height: 100%;
+    width: 100%;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.3s ease-in-out; 
+    -webkit-transition: all 0.3s ease-in-out; 
+}
+@media ( min-width: 768px ) {
+    .ibetcha-home .ibetcha-article-image:hover {
+        transform: scale(1.5,1.5);
+        -webkit-transform: scale(1.5,1.5);            
+    }
+}
+.ibetcha-home .ibetcha-post-header h2.ibetcha-post-title {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+.ibetcha-home .ibetcha-post-header h2.ibetcha-post-title:hover {
+    color: var(--accent);
+}
+.ibetcha-home .ibetcha-post-date small{
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+.ibetcha-home .ibetcha-post-content {
+    margin-top: 2rem;
+}
+.ibetcha-home .btn {
+    margin-top: 2rem;
+}
+.ibetcha-post-header {
+    background-color: var(--white);
+}
+.ibetcha-post-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.ibetcha-post-pagination a:first-of-type {
+    margin-right: 2rem;
+}

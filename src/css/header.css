@@ -1,0 +1,62 @@
+/**HEADER**/
+/* header.site-header {
+    background-color: var(--blue);
+    color: var(--white);
+    padding-top: 3rem;
+} */
+@media ( min-width: 768px ) {
+    header.site-header {
+        padding-top: 0;
+    }
+}
+header.site-header .ibetcha-header-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    grid-gap: 2rem;
+}
+@media ( min-width: 768px ) {
+    header.site-header .ibetcha-header-grid {
+        display: grid;
+        grid-template-columns: auto 50% auto;
+        align-items: center;
+    }
+}
+header.site-header .ibetcha-header-grid #ibetcha-logo {
+    text-align: left;
+    padding-left: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+@media ( min-width: 768px ) {
+    header.site-header .ibetcha-header-grid #ibetcha-logo {
+        text-align: left;        
+    }
+}
+header.site-header .ibetcha-header-grid #ibetcha-logo img {
+    height: 60px;
+}
+@media ( min-width: 768px ) {
+    header.site-header .ibetcha-header-grid #ibetcha-logo img {
+        height: 70px;
+    }
+}
+header.site-header .ibetcha-header-options {
+    grid-column: 3 / 4;
+    text-align: right;
+}
+header.site-header .ibetcha-header-grid .ibetcha-user-info {
+    text-align: center;
+}
+@media( min-width: 768px ) {
+    header.site-header .ibetcha-header-grid .ibetcha-user-info {
+        text-align: right;
+    }
+}
+
+/** Authentication menu **/
+
+header.site-header .ibetcha-auth-menu {
+    padding: 1rem 0;
+}

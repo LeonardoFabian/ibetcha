@@ -1,0 +1,127 @@
+/*
+ThemeName:  IBETCHA
+Theme URI: 
+Author: Leonardo Fabian
+Author URI: https://www.leonardofabian.com/
+Description: Plantilla de WordPress con diseño responsivo, desarrollada para uso exclusivo de I-BETCHA P2P SPORTS ENTERTAINMENT.
+Version: 1.0.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Bet, Sport, Sports, P2P, CSS Grid, Gutenberg, Flexbox, Mobile first
+Text Domain: ibetcha 
+Domain Path: /lang
+*/
+
+@import './src/css/custom-slicknav.css';
+@import './src/css/wp-gutenberg-widgets.css';
+@import './src/css/layout.css';
+@import './src/css/utils.css';
+@import './src/css/header.css';
+@import './src/css/nav.css';
+@import './src/css/hero.css';
+@import './src/css/page.css';
+@import './src/css/blog.css';
+@import './src/css/comments.css';
+@import './src/css/sidebar.css';
+@import './src/css/footer.css';
+@import './src/css/forms.css';
+
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+    --lora: 'Lora', serif;
+    --amiko: 'Amiko', sans-serif;
+
+    --container: 1600px;
+
+    --blue: rgb(4,30,66);
+    --red: rgb(200,0,28); /* #c8001c */
+    --light-red: rgb(255,239,241); /* #ffeff1 */
+    --gray: rgb(226,226,226);
+    --dark-gray: rgb(107, 114, 128);
+    --white: rgb(255,255,255);
+    --black: rgb(0,0,0);
+    --primary: rgb(51,85,128); /* #335580 */
+    --accent: rgb(0,212,243); /* #00d4f3 */
+    --dark: rgb(17, 24, 39);
+
+    --shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+textarea, input{
+    border: 1px solid var(--gray);
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+time {
+    color: var(--dark-gray);
+    font-family: var(--amiko);
+    font-size: 1.5rem;
+}
+html {
+    box-sizing: border-box;
+    font-size: 50.5%;
+}
+@media (min-width: 768px){
+    html {
+        font-size: 55.5%;
+    }
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var( --amiko ); 
+    font-size: 1.6rem;
+    line-height: 1;
+}
+table, th, td {
+    border: 1px solid var(--gray);
+  }
+p {
+    font-size: 1.8rem;
+    line-height: .5;
+    font-family: var(--amiko);
+}
+h1, h2, h3, h4 {
+    font-family: var( --montserrat );
+    font-weight: 900;
+    margin: 0;
+}
+h1 {
+    font-size: 3.2rem;
+    line-height: 1.5;
+    /* color: var( --blue-500 ); */
+    opacity: .8;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1rem;
+}
+blockquote {
+    font-family: var( --lora );
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li,
+ol li {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

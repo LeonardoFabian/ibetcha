@@ -1,0 +1,67 @@
+#content {
+    background-color: var(--gray);
+}
+
+.ibetcha-page .hero {
+    height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ibetcha-page .hero::after {
+    position: absolute;
+    background-color: rgba(4,30,66,.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+.ibetcha-page .hero h1 {
+    font-family: var(--montserrat);
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+    z-index: 1;
+    position: relative;
+}
+.ibetcha-page #content p{
+    line-height: 1.5;
+}
+
+/*------- PAGE REGISTER -----------*/
+
+.page-register-hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;    
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.page-register-hero::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0,51,102,0.7),
+        rgba(0,0,51,0.7)
+    );
+    content: '';
+}
+.page-register .ibetcha-register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+}
+
+.page-register .ibetcha-register-wrapper .ibetcha-card {
+    position: relative;
+    margin-top: -100vh;
+}

@@ -1,0 +1,13 @@
+.ibetcha-widget {
+    background-color: var(--white);
+    padding: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+.ibetcha-widget-title {
+    font-size: 1.8rem;
+    font-family: var(--montserrat);
+    color: var(--dark);
+    margin-bottom: 1rem;
+}

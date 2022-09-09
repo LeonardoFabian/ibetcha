@@ -1,0 +1,210 @@
+/**UTILS**/
+.container {
+    width: 95%;
+    max-width: var( --container );
+    margin: 0 auto;
+}
+.section {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.flex {
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.sr-text {
+    display: none;
+}
+.text-primary {
+    color: var(--primary);
+}
+
+/** CARDS **/
+.ibetcha-card {
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+.ibetcha-card .ibetcha-card-header {
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.ibetcha-card .ibetcha-card-title {
+    font-family: var(--montserrat);
+    color: var(--blue);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.ibetcha-card .ibetcha-card-content {
+    padding: 2rem;
+}
+.ibetcha-mobile-only {
+    display: block;
+}
+@media ( min-width: 768px ) {
+    .ibetcha-mobile-only {
+        display: none;
+    }
+}
+
+.btn {
+    display: block;
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--amiko);
+    text-transform: uppercase;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+    padding: 1.5rem 3rem;
+    border: none;
+}
+@media ( min-width: 768px ) {
+    .btn {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+    .btn:hover {
+        cursor: pointer;
+    }
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+@media ( min-width: 768px ) {
+    .btn-primary:hover {
+        background-color: var(--blue);
+    }
+}
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+@media ( min-width: 768px ) {
+    .btn-secondary:hover {
+        background-color: var(--gray);
+    }
+}
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--white);
+}
+.btn-accent a {
+    color: var(--white);
+}
+@media ( min-width: 768px ) {
+    .btn-accent:hover {
+        background-color: var(--white);
+        color: var(--primary);
+    }
+    .btn-accent a:hover,
+    .btn-accent:hover a {
+        color: var(--primary);
+    }
+}
+.btn-link {
+    background-color: transparent;
+    color: var(--dark-gray);
+}
+@media ( min-width: 768px ) {
+    .btn-link,
+    .btn-link a {
+        color: var(--primary);
+    }
+    .btn-link:hover,
+    .btn-link a:hover {
+        color: var(--accent);
+    }
+    .btn-link-accent,
+    .btn-link-accent a {
+        color: var(--accent);
+    }
+    .btn-link-accent:hover,
+    .btn-link-accent a:hover {
+        color: var(--white);
+    }
+}
+.btn-sm {
+    padding: 1rem 2rem !important;
+}
+.btn-md {
+    padding: 1.5rem 3rem !important;
+}
+.btn-lg {
+    padding: 2rem 4rem !important;
+}
+
+
+
+
+/** alert with arrow on top **/
+
+/* span.um-field-arrow {
+    top: -17px;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+    color: #C74A4A;
+    font-size: 28px;
+    line-height: 1em !important;
+}
+span.um-field-arrow i.um-faicon-caret-up {
+
+} */
+
+
+
+/*---------- Alert ----------*/
+
+.alert {
+    position: relative;
+    padding: 1.5rem 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+}
+.alert-danger {
+    color: var(--red);
+    background-color: var(--light-red);
+    border-color: var(--light-red);
+}
+
+/*-------- Layout ---------*/
+
+.col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}

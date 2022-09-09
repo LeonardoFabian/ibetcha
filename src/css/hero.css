@@ -1,0 +1,14 @@
+/**HERO**/
+#hero {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 4rem 0;
+    margin-top: 2rem;
+}
+#hero .banner {
+    right: 0;
+    top: -30px;
+}
+#hero img {
+    max-height: 110px;
+}
