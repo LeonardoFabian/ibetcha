@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGqB,aAAa;AACJ,aAAa;AAKjB,aAAa;AACd,aAAa;ACRtC,YAAa;EACT,gBAAgB,EDDb,OAAY;ECEf,KAAK,EDGD,KAAgB;ECFpB,WAAW,EAAE,IAAI",
+"sources": ["../sass/_variables.scss","../sass/ibetcha-public.scss"],
+"names": [],
+"file": "ibetcha-public.css"
+}
