@@ -75,8 +75,11 @@ class IBETCHA_Admin {
             __( 'Customize template', 'ibetcha' ),
             __( 'Customize template', 'ibetcha' ),
             'manage_options',
-            'ibetcha_template_options_page',
-            [$this, 'ibetcha_template_options_display']
+            // 'ibetcha_template_options_page',
+            // [$this, 'ibetcha_template_options_display']
+            '?page=ibetcha_options_page',
+            null,
+            null
         );
 
         $this->build_menupage->add_submenu_page(
@@ -111,6 +114,16 @@ class IBETCHA_Admin {
     }
 
     public function ibetcha_options_display() {
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
+
+        if ( isset( $_GET['settings-updated'] ) ) {
+            add_settings_error( 'ibetcha_template_options', 'ibetcha_message', 'Settings Saved', 'success' );
+        }
+
+        settings_errors( 'ibetcha_template_options' );
 
         require( IBETCHA_DIR_PATH . 'admin/partials/ibetcha-options-display.php' );
 
