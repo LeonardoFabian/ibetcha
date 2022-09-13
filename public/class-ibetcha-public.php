@@ -24,7 +24,31 @@ class IBETCHA_Public {
             array(), 
             '8.0.1',
             'all'
+        );  
+        
+        wp_enqueue_style( 
+            $this->theme_name . '-css', 
+            IBETCHA_DIR_URI .'public/css/ibetcha-public.css', 
+            array( 'normalize' ),
+            $this->version, 
+            'all' 
         );
+
+        wp_enqueue_style( 
+            $this->theme_name . 'styles', 
+            get_stylesheet_uri(), 
+            array( 'normalize'), 
+            $this->version,
+            'all'
+        );
+
+        wp_enqueue_style(
+            'bootstrap',
+            IBETCHA_DIR_URI . 'helpers/bootstrap-5.0.2/css/bootstrap.min.css',
+            array(),
+            '5.0.2',
+            'all'
+        );             
 
         // Fontawesome
         wp_enqueue_style( 
@@ -82,21 +106,7 @@ class IBETCHA_Public {
         //     'all'
         // );
 
-        wp_enqueue_style( 
-            $this->theme_name . '-css', 
-            IBETCHA_DIR_URI .'public/css/ibetcha-public.css', 
-            array( 'normalize' ),
-            $this->version, 
-            'all' 
-        );
-
-        wp_enqueue_style( 
-            $this->theme_name . 'styles', 
-            get_stylesheet_uri(), 
-            array( 'normalize'), 
-            $this->version,
-            'all'
-        );
+        
     }
 
     /**
@@ -132,7 +142,7 @@ class IBETCHA_Public {
         wp_enqueue_script( 
             $this->theme_name . '-js', 
             IBETCHA_DIR_URI . 'public/js/ibetcha-public.js', 
-            array( 'jquery' ), 
+            [ 'jquery', 'bootstrap-min' ], 
             $this->version, 
             true 
         );
@@ -140,8 +150,34 @@ class IBETCHA_Public {
         wp_enqueue_script( 
             'scripts', 
             IBETCHA_DIR_URI . 'public/js/scripts.js', 
-            array( 'jquery' ), 
+            [ 'jquery', 'bootstrap-min' ], 
             $this->version, 
+            true 
+        );
+
+        // to use in development
+        wp_enqueue_script( 
+            'popper-dev-version', 
+            'https://unpkg.com/@popperjs/core@2/dist/umd/popper.js', 
+            array(), 
+            '2.0.0', 
+            true 
+        );
+
+        // to use in production
+        wp_enqueue_script( 
+            'popper-prod-version', 
+            'https://unpkg.com/@popperjs/core@2', 
+            array(), 
+            '2.0.0', 
+            true 
+        );
+
+        wp_enqueue_script( 
+            'bootstrap-min', 
+            IBETCHA_DIR_URI . 'helpers/bootstrap-5.0.2/js/bootstrap.min.js', 
+            [ 'jquery', 'popper-dev-version' ], 
+            '5.0.2', 
             true 
         );
 
@@ -165,7 +201,7 @@ class IBETCHA_Public {
     /**
      * Register frontend theme menus
      */
-    public function ibetcha_register_nav_menus() {
+    public function ibetcha_theme_support() {
 
         register_nav_menus( array(
             'main-menu' => __( 'Main menu', 'ibetcha' ),
@@ -186,6 +222,12 @@ class IBETCHA_Public {
         ];
 
         add_theme_support( 'custom-logo', $logo );
+
+        // CEO page title
+        add_theme_support( 'title-tag' );
+
+        // Featured image
+        add_theme_support( 'post-thumbnails' );
 
     }
 

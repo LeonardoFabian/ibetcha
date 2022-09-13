@@ -39,6 +39,9 @@ class IBETCHA_Master {
 
         // class responsible for defining all actions in the client/public area
         require_once IBETCHA_DIR_PATH . 'public/class-ibetcha-public.php';
+
+        // class responsible for request data from the database
+        require_once IBETCHA_DIR_PATH . 'includes/class.ibetcha-database.php';
         
     }
 
@@ -54,10 +57,11 @@ class IBETCHA_Master {
      * Load public, admin and loader instances
      */
     private function load_instances() {
-        $this->loader = new IBETCHA_Loader;
-        $this->ibetcha_admin = new IBETCHA_Admin( $this->get_theme_name(), $this->get_version() );
-        $this->ibetcha_public = new IBETCHA_Public( $this->get_theme_name(), $this->get_version() );
+        $this->loader           = new IBETCHA_Loader;
+        $this->ibetcha_admin    = new IBETCHA_Admin( $this->get_theme_name(), $this->get_version() );
+        $this->ibetcha_public   = new IBETCHA_Public( $this->get_theme_name(), $this->get_version() );
         $this->ibetcha_settings = new IBETCHA_Settings();
+        $this->ibetcha_database = new IBETCHA_Database();
     }
 
     /**
@@ -81,8 +85,9 @@ class IBETCHA_Master {
     private function define_public_hooks() {
         $this->loader->add_action( 'wp_enqueue_scripts', $this->ibetcha_public, 'ibetcha_enqueue_styles' );
         $this->loader->add_action( 'wp_enqueue_scripts', $this->ibetcha_public, 'ibetcha_enqueue_scripts' );
-        // public nav menus
-        $this->loader->add_action( 'init', $this->ibetcha_public, 'ibetcha_register_nav_menus' );
+
+        // theme support
+        $this->loader->add_action( 'init', $this->ibetcha_public, 'ibetcha_theme_support' );
     }
 
     /**

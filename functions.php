@@ -38,12 +38,7 @@ if ( ! function_exists( 'ibetcha_after_setup' ) )
      * @since       1.0.0
      */
     function ibetcha_after_setup()
-    {
-        // CEO page title
-        add_theme_support( 'title-tag' );
-
-        // Featured image
-        add_theme_support( 'post-thumbnails' );
+    {       
 
         // Image sizes
         add_image_size( 'team-logo', 100, 100 );

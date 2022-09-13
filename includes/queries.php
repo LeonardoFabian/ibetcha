@@ -6,6 +6,7 @@
 function ibetcha_current_user_info()
 {
     $current_user = wp_get_current_user();
+    $avatar = IBETCHA_DIR_URI . 'avatar.png';
 
     if ( ! ( $current_user instanceof WP_User ) ) {
         return;
@@ -25,6 +26,17 @@ function ibetcha_current_user_info()
                     ?>
                 </p>
             </div>
+
+            <ul class="nav">
+                <li class="nav-item dropdown">
+                    <button class="btn mt-0 dropdown-toggle avatar" type="button" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">              
+                        <img src="<?php echo $avatar ?>" class="img-responsive" />                     
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     <?php
 }

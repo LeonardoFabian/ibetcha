@@ -62,13 +62,13 @@ time {
 }
 html {
     box-sizing: border-box;
-    font-size: 50.5%;
+    /* font-size: 50.5%; */
 }
-@media (min-width: 768px){
+/* @media (min-width: 768px){
     html {
         font-size: 55.5%;
     }
-}
+} */
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -80,11 +80,11 @@ body {
 table, th, td {
     border: 1px solid var(--gray);
   }
-p {
+/* p {
     font-size: 1.8rem;
     line-height: .5;
     font-family: var(--amiko);
-}
+} */
 h1, h2, h3, h4 {
     font-family: var( --montserrat );
     font-weight: 900;
