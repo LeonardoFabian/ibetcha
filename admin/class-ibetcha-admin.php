@@ -77,7 +77,7 @@ class IBETCHA_Admin {
             'manage_options',
             // 'ibetcha_template_options_page',
             // [$this, 'ibetcha_template_options_display']
-            '?page=ibetcha_options_page',
+            '?page=ibetcha_options_page&tab=customize_template',
             null,
             null
         );
@@ -87,8 +87,11 @@ class IBETCHA_Admin {
             __( 'Coin', 'ibetcha' ),
             __( 'Coin', 'ibetcha' ),
             'manage_options',
-            'ibetcha_coin_page',
-            [$this, 'ibetcha_coin_display']
+            // 'ibetcha_coin_page',
+            // [$this, 'ibetcha_coin_display']
+            '?page=ibetcha_options_page&tab=coin',
+            null,
+            null
         );
 
         $this->build_menupage->add_submenu_page(
@@ -96,8 +99,11 @@ class IBETCHA_Admin {
             __( 'Payments', 'ibetcha' ),
             __( 'Payments', 'ibetcha' ),
             'manage_options',
-            'ibetcha_payment_options_page',
-            [$this, 'ibetcha_payment_options_display']
+            // 'ibetcha_payment_options_page',
+            // [$this, 'ibetcha_payment_options_display']
+            '?page=ibetcha_options_page&tab=payment_options',
+            null,
+            null
         );
 
         $this->build_menupage->add_submenu_page(
@@ -105,8 +111,11 @@ class IBETCHA_Admin {
             __( 'Advanced options', 'ibetcha' ),
             __( 'Advanced options', 'ibetcha' ),
             'manage_options',
-            'ibetcha_advanced_options_page',
-            [$this, 'ibetcha_advanced_options_display']
+            // 'ibetcha_advanced_options_page',
+            // [$this, 'ibetcha_advanced_options_display']
+            '?page=ibetcha_options_page&tab=advanced_options',
+            null,
+            null
         );
 
         $this->build_menupage->run();
