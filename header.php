@@ -53,8 +53,11 @@
                                     <?php ibetcha_current_user_info(); ?>
                                 </div>
                             <?php else : ?>
-                                <?php if ( has_nav_menu( 'auth-menu' ) ) : ?>
+                                <a href="<?php echo home_url( '/wp-login.php'); ?>" class="btn btn-primary">Login</a>
+
+                                <?php /* if ( has_nav_menu( 'auth-menu' ) ) : ?>
                                     <?php 
+                                    
                                     $args = array(
                                         'theme_location' => 'auth-menu',
                                         'container' => 'nav',
@@ -63,7 +66,8 @@
                                     );
                                     wp_nav_menu( $args );
                                     ?>
-                                <?php endif; ?>
+                                <?php endif; */ ?>
+                                
                             <?php endif; ?>
                         </div>
                     </div>

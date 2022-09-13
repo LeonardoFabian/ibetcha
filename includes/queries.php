@@ -34,6 +34,9 @@ function ibetcha_current_user_info()
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><a class="dropdown-item" href="#">Wallet</a></li>
+                        <li><a class="dropdown-item" href="<?php wp_logout(); ?>">Logout</a></li>
                     </ul>
                 </li>
             </ul>

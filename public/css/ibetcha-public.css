@@ -21,3 +21,10 @@
   justify-content: end;
   gap: 12px;
 }
+
+.dropdown-menu {
+  min-width: 20rem !important;
+}
+.dropdown-menu li {
+  padding: .5rem 1rem !important;
+}
