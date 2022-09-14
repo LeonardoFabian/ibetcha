@@ -19,9 +19,12 @@
         </div>
     </div>
 
-    <div class="section container with-two-sidebar">
-        <!-- page-navigation -->
-        <aside class="sidebar">
+    <div class="section container-fluid">
+
+        <div class="row col-12">
+
+            <!-- page-navigation -->
+        <aside class="sidebar col-12 col-md-3">
             <?php
                 $args = array(
                     'theme_location' => 'sidebar-menu',
@@ -32,7 +35,8 @@
                 wp_nav_menu( $args );
             ?>
         </aside>
-        <main class="main-content">
+
+        <main class="main-content col-12 col-md-6">
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php 
                     $post = get_post();
@@ -88,9 +92,13 @@
             </div>
         </main>
 
-        <div>
+        <div class="col-12 col-md-3">
             <?php get_sidebar(); ?>
         </div>
+
+
+        </div>
+
     </div>
     
 

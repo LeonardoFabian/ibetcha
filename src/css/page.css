@@ -24,7 +24,6 @@
 }
 .ibetcha-page .hero h1 {
     font-family: var(--montserrat);
-    font-size: 4.5rem;
     text-transform: uppercase;
     color: var(--white);
     z-index: 1;

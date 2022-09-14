@@ -54,7 +54,6 @@
         display: block;
         white-space: nowrap;
         text-align: center;
-        font-size: 1.5rem;
         text-transform: uppercase;
         color: var(--blue);
         padding: 1rem 2rem;
@@ -85,7 +84,6 @@
     }
     .site-nav .menu li.current-menu-parent ul.sub-menu li a {
         color: var(--gray);
-        font-size: 1.5rem;
         text-align: left;
     }
     .site-nav .menu li.current-menu-parent ul.sub-menu li a:hover {

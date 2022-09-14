@@ -58,58 +58,41 @@ textarea:focus, input:focus{
 time {
     color: var(--dark-gray);
     font-family: var(--amiko);
-    font-size: 1.5rem;
 }
 html {
     box-sizing: border-box;
-    /* font-size: 50.5%; */
 }
-/* @media (min-width: 768px){
-    html {
-        font-size: 55.5%;
-    }
-} */
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body {
     font-family: var( --amiko ); 
-    font-size: 1.6rem;
     line-height: 1;
 }
 table, th, td {
     border: 1px solid var(--gray);
   }
-/* p {
-    font-size: 1.8rem;
+p {
+   
     line-height: .5;
     font-family: var(--amiko);
-} */
+}
 h1, h2, h3, h4 {
     font-family: var( --montserrat );
     font-weight: 900;
     margin: 0;
 }
 h1 {
-    font-size: 3.2rem;
     line-height: 1.5;
-    /* color: var( --blue-500 ); */
     opacity: .8;
 }
-h2 {
-    font-size: 2.4rem;
-}
-h3 {
-    font-size: 1.6rem;
-}
-h4 {
-    font-size: 1rem;
-}
+
 blockquote {
     font-family: var( --lora );
 }
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 ul {
     margin: 0;
@@ -118,7 +101,6 @@ ul {
 }
 ul li,
 ol li {
-    font-size: 1.8rem;
     line-height: 2;
 }
 img {

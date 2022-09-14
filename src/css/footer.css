@@ -26,25 +26,21 @@
 .site-footer h3, .site-footer h4 {
     font-family: var(--montserrat);
     text-transform: uppercase;
-    font-size: 2rem;
     color: var(--gray);
     margin-bottom: 2rem;
 }
 .site-footer p {
     font-family: var(--amiko);
-    font-size: 1.5rem;
     line-height: 1.5;
     color: var(--dark-gray);
 }
 .site-footer a {
     color: var(--accent);
     font-family: var(--amiko);
-    font-size: 1.5rem;
 }
 .site-footer-bottom .copyright {
     color: var(--white);
     font-family: var(--amiko);
-    font-size: 1.2rem;
     line-height: 1.5;
     text-transform: uppercase;
 }
@@ -67,7 +63,6 @@
     margin-right: 0;
 }
 .social-network-nav-wrapper ul li a {
-    font-size: 3.5rem;
     text-align: center;
 }
 .social-network-nav-wrapper ul li a:hover {

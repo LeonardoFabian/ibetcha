@@ -1,9 +1,9 @@
 /**UTILS**/
-.container {
+/* .container {
     width: 95%;
     max-width: var( --container );
     margin: 0 auto;
-}
+} */
 .section {
     position: relative;
     padding-top: 4rem;
@@ -52,7 +52,6 @@
 .ibetcha-card .ibetcha-card-title {
     font-family: var(--montserrat);
     color: var(--blue);
-    font-size: 2.5rem;
     text-transform: uppercase;
 }
 .ibetcha-card .ibetcha-card-content {
@@ -67,24 +66,9 @@
     }
 }
 
-.btn {
-    display: block;
-    flex: 1;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: var(--amiko);
-    text-transform: uppercase;
-    border-radius: .5rem;
-    transition: all .3s ease-in-out;
-    padding: 1.5rem 3rem;
-    border: none;
-}
+
 @media ( min-width: 768px ) {
-    .btn {
-        display: inline-block;
-        flex: 0 0 auto;
-    }
+   
     .btn:hover {
         cursor: pointer;
     }
@@ -159,21 +143,6 @@
 
 
 
-
-/** alert with arrow on top **/
-
-/* span.um-field-arrow {
-    top: -17px;
-    left: 10px;
-    position: absolute;
-    z-index: 1;
-    color: #C74A4A;
-    font-size: 28px;
-    line-height: 1em !important;
-}
-span.um-field-arrow i.um-faicon-caret-up {
-
-} */
 
 
 

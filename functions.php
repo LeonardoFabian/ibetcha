@@ -135,4 +135,12 @@ if ( ! function_exists( 'ibetcha_custom_paginate_links' ) )
     }
 }
 
+// add_filter('parse_request', 'custom_logout');
+// function custom_logout($request){
+//     if  ( $request->query_vars['pagename']=='logout'){ 
+//         wp_logout();
+//         wp_set_current_user(0);
+//     }
+// }
+
 ?>

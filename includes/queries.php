@@ -33,10 +33,24 @@ function ibetcha_current_user_info()
                         <img src="<?php echo $avatar ?>" class="img-responsive" />                     
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Account</a></li>
-                        <li><a class="dropdown-item" href="#">Wallet</a></li>
-                        <li><a class="dropdown-item" href="<?php wp_logout(); ?>">Logout</a></li>
+
+                        <?php 
+
+                        $profile = add_query_arg( 'user', $current_user->ID, home_url( '/profile' ) ); 
+
+                        $account = add_query_arg( 'user', $current_user->ID, home_url( '/account' ) );
+                        
+                        $wallet = add_query_arg( 'user', $current_user->ID, home_url( '/wallet' ) );
+                        
+                        ?>
+                        <li><a class="dropdown-item" href="<?php echo esc_url( $profile ); ?>"><?php echo esc_html( 'Profile', 'ibetcha' ) ?></a></li>
+
+                        <li><a class="dropdown-item" href="<?php echo esc_url( $account ); ?>"><?php echo esc_html( 'Account', 'ibetcha' ) ?></a></li>
+
+                        <li><a class="dropdown-item" href="<?php echo esc_url( $wallet ); ?>"><?php echo esc_html( 'Wallet', 'ibetcha' ) ?></a></li>
+
+                        <li><a class="dropdown-item" href="<?php echo home_url('/wp-login.php?action=logout') ?>"><?php echo esc_html( 'Logout', 'ibetcha' ); ?></a></li>
+
                     </ul>
                 </li>
             </ul>

@@ -12,7 +12,6 @@
     margin-bottom: 0;
 }
 .ibetcha-home article h2 {
-    font-size: 1.8rem;
     font-family: var(--montserrat);
 }
 .ibetcha-home article p,
@@ -60,7 +59,6 @@
     color: var(--accent);
 }
 .ibetcha-home .ibetcha-post-date small{
-    font-size: 1.3rem;
     color: var(--dark-gray);
     font-weight: bold;
 }

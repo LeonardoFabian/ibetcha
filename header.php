@@ -53,20 +53,9 @@
                                     <?php ibetcha_current_user_info(); ?>
                                 </div>
                             <?php else : ?>
-                                <a href="<?php echo home_url( '/wp-login.php'); ?>" class="btn btn-primary">Login</a>
+                                <a href="<?php echo home_url( '/wp-login.php'); ?>" class="btn btn-info"><?php echo esc_html( 'Login', 'ibetcha' ); ?></a>
 
-                                <?php /* if ( has_nav_menu( 'auth-menu' ) ) : ?>
-                                    <?php 
-                                    
-                                    $args = array(
-                                        'theme_location' => 'auth-menu',
-                                        'container' => 'nav',
-                                        'container_class' => 'ibetcha-auth-menu',
-                                        'container_id' => 'ibetcha-auth-menu'
-                                    );
-                                    wp_nav_menu( $args );
-                                    ?>
-                                <?php endif; */ ?>
+                          
                                 
                             <?php endif; ?>
                         </div>
